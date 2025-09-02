@@ -1,29 +1,13 @@
-# web-dev-starter
+# To Run
+To run my web page, ensure you have Live Preview installed, 
+then simply go to the debugging tab and select "Debug Website." 
+Then, hit the big green arrow and a chrome window will appear 
+hosted on a local server displaying this web page.
 
-This is a starter project for web development with no frameworks and minimal
-dependencies. It is intended to be a starting point for web development projects
-that are written in plain HTML, CSS, and JavaScript.
+# To Test
+To test this web pages' JavaScript, ensure that NPM is installed
+in this directory. Once installed, simply type "npm run test" in 
+the terminal.
 
-## Getting Started
-
-To get started, clone this repository and run the following commands:
-
-```bash
-npm install
-```
-This will install the necessary dependencies for the project.
-
-## Development
-
-It is recommended to use the VSCode Live Server extension to run the project
-locally. This will allow you to see changes in real-time as you make them. There
-is no need to run a build process or refresh the page manually. Additionally,
-you do not need to setup a local server to run the project.
-
-## Testing
-
-To run the tests for the project, run the following command:
-
-```bash
-npm test
-```
+Note: because of this Lab's Task 6 Bullet point 5, the test for 
+printing Hello World to console may fail.
