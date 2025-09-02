@@ -12,20 +12,35 @@
 
 <body>
   <h1>HTML Rocks!</h1>
+  <img src="img/me.JPG" alt="Me">
+  <ul>
+    <li>My Name is Ryan Orth</li>
+    <li>I Expect to Graduate Spring of 2026</li>
+    <li>I do not currently have a job in Web Dev</li>
+    <li>I Have never had an internship or job in Web Dev</li>
+  </ul>
+  <hr>
   <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
+    <button id="helloworldbutton" onclick="helloWorld()">Pop a Dialog to say Hello World!</button>
   </p>
   <hr>
   <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
+    <div id="formDiv">
+      <label for="num1">Number 1:</label>
+      <input type="number" id="num1" name="num1" placeholder="eg. 5, -8, 5,280" required>
+    </div>
     <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
+    <div id="formDiv">
+      <label for="num2">Number 2:</label>
+      <input type="number" id="num2" name="num2" placeholder="eg. 5, -8, 5,280" required>
+    </div>
     <br>
-    <button type="submit">Add Numbers</button>
+    <div id="formDiv">
+      <button type="submit">Add Numbers</button>
+    </div>
   </form>
 
+  <br>
   <label id="result">Result:</label>
 
   <hr>
@@ -34,11 +49,11 @@
   <p id="joke"></p>
 
   <hr>
-  <button id="jokeButtonTable">Get a  5 Random Jokes</button>
+  <button id="jokeButtonTable">Get a 5 Random Jokes</button>
   <table id="jokeTable"></table>
 
   <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke, fetch5RandomJokes} from './js/main.js';
+    import { helloWorld, add, fetchRandomJoke, fetch5RandomJokes } from './js/main.js';
 
     // This shows how to assign a function to the window object
     // so that it can be called from the browser console
@@ -47,14 +62,14 @@
     // This shows how to add an event listener to a button in the HTML
     // and call a function when the button is clicked
     const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
       const num1 = parseFloat(document.getElementById('num1').value);
       const num2 = parseFloat(document.getElementById('num2').value);
-      try{
+      try {
         const result = add(num1, num2);
         document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
+      } catch (e) {
         console.error(e);
         document.getElementById('result').textContent = `Error: ${e.message}`;
       }
