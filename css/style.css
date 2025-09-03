@@ -1,11 +1,21 @@
+body {
+  background-color: #9bb895;
+  margin: 0%;
+  padding: 0%;
+  border: 0%;
+}
+
 h1 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-color: #aaaaaa;
   border-style: solid;
   background-image: url("../img/header-background.jpg");
-  background-size: cover;
-  height: 50px;
-  margin: 10%;
+  height: 150px;
+  padding: 0%;
+  margin: 0%;
+  border: 0px 0px 3px 0px;
 }
 
 h2 {
@@ -32,6 +42,10 @@ th {
 
 tbody tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
 }
 
 tbody tr:hover {
@@ -75,4 +89,8 @@ li {
 
 input[type="number"]::placeholder {
   color: #b0cbf5;
+}
+
+#jokeTableDiv {
+  margin: 2% 10% 0% 10%;
 }
